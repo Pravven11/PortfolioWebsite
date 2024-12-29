@@ -7,12 +7,10 @@ import { usePrefersReducedMotion } from '@hooks';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
-
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 50px;
-
     @media (max-width: 768px) {
       display: block;
     }
@@ -27,14 +25,13 @@ const StyledText = styled.div`
     margin: 20px 0 0 0;
     overflow: hidden;
     list-style: none;
-
     li {
+      color: var(--green);
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
-
       &:before {
         content: '▹';
         position: absolute;
@@ -49,12 +46,10 @@ const StyledText = styled.div`
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
-
   @media (max-width: 768px) {
     margin: 50px auto 0;
     width: 70%;
   }
-
   .wrapper {
     ${({ theme }) => theme.mixins.boxShadow};
     display: block;
@@ -62,22 +57,19 @@ const StyledPic = styled.div`
     width: 100%;
     border-radius: var(--border-radius);
     background-color: var(--green);
-
     &:hover,
     &:focus {
+      background: transparent;
       outline: 0;
-      transform: translate(-4px, -4px);
-
       &:after {
-        transform: translate(8px, 8px);
+        top: 15px;
+        left: 15px;
       }
-
       .img {
         filter: none;
         mix-blend-mode: normal;
       }
     }
-
     .img {
       position: relative;
       border-radius: var(--border-radius);
@@ -85,7 +77,6 @@ const StyledPic = styled.div`
       filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
-
     &:before,
     &:after {
       content: '';
@@ -96,18 +87,16 @@ const StyledPic = styled.div`
       border-radius: var(--border-radius);
       transition: var(--transition);
     }
-
     &:before {
       top: 0;
       left: 0;
       background-color: var(--navy);
       mix-blend-mode: screen;
     }
-
     &:after {
       border: 2px solid var(--green);
-      top: 14px;
-      left: 14px;
+      top: 20px;
+      left: 20px;
       z-index: -1;
     }
   }
@@ -125,8 +114,18 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Market Research', 'Data Analysis', 'Brand Management', 'Digital Marketing', 
-  'SPSS', 'Tableau', 'MS Office', 'Python'];
+  const skills = [
+    'React',
+    'Node.js',
+    'MongoDB',
+    'Firebase',
+    'C++',
+    'Python',
+    'JavaScript',
+    'Git',
+    'Linux',
+    'SQL',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -136,32 +135,13 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            With a core specialization in Marketing &amp; Strategy, I've orchestrated impactful
-             strategies in brand perceptions during my MBA summer internship for {' '}
-             <a href="https://www.tatastructura.com">Tata Structura</a> {' '} at{' '} 
-             <a href="https://drive.google.com/file/d/1xhGTFz7pe6kP7bZ4peDgJ7hlG630K8rz/view?usp=sharing">Tata Steel</a>.
+            My journey in web development began with a fascination for creating interactive and impactful digital experiences. Over time, this curiosity grew into a passion for learning, adapting, and tackling new challenges in the ever-evolving tech landscape
             </p>
-
             <p>
-            I also spearheaded employer branding initiatives for {' '}
-            <a href="https://drive.google.com/file/d/1w-uN9jb86pxFXPYMDu_78P-d1CZJAx3V/view?usp=sharing">
-              Aditya Birla Fashion and Retail</a>, {' '} resulting in a remarkable 37% surge in consumer engagement 
-              during my remote live project as part of my MBA journey.
+            I thrive in collaborative settings, where ideas come to life, and I take pride in solving complex problems to build efficient and high-quality solutions.
+            <br />
+            Beyond coding, I enjoy exploring the latest technologies, staying active, and contributing to open-source projects that make a difference.
             </p>
-
-            <p>
-            During my tenure at {' '} <a href="https://www.amdocs.com">Amdocs</a>, {' '} 
-            where I served as a Software Developer, I had the honor of being selected as one of 16 elite {' '} 
-            <a href="https://drive.google.com/file/d/16BGu5InZZDGCtoWas560ezwKsgVBKbI9/view?usp=sharing">Innovation Agents</a>.
-            </p>
-
-            <p>
-            Moreover, my role as a {' '} <a href="https://drive.google.com/file/d/1iRTZfE7v5Y99BYZVxevaGBVtF90t-TOb/view?usp=sharing">
-              Placement Coordinator</a> {' '} at IIM Rohtak saw me cultivate over 30 new corporate relationships, culminating in a 
-              remarkable 42% boost in campus placements.
-            </p>
-
-            <p>My skills are not limited to this list!</p>
           </div>
 
           <ul className="skills-list">

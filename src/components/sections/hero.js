@@ -60,35 +60,29 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Namaste! My name is</h1>;
-  const two = <h2 className="big-heading">Chandrika Deb</h2>;
-  const three = <h3 className="medium-heading">MBA | Marketing Enthusiast | Freelance Blogger</h3>;
+  const two = <h2 className="big-heading">Praveen Tiwari</h2>;
+  const three = <h2 className="small-heading">I love exploring new things.</h2>;
   const four = (
     <>
       <p>
-        <b>Glad to e-meet you!</b>
+      Enthusiastic and dedicated web developer with practical experience in designing and implementing full-stack web applications.
       </p>
+      <p>Skilled in JavaScript, React, and Node.js, with a solid understanding of databases and RESTful APIs.
 
-      <p>
-        I am Chandrika Deb, an alumnus of {' '} <a href="http://www.iimrohtak.ac.in">
-        IIM Rohtak</a> {' '} and {' '} <a href="https://www.bitmesra.ac.in">BIT Mesra</a> {' '} currently spearheading impactful marketing initiatives at {' '}
-        <a href="https://www.tatasteel.com">Tata Steel</a>.
       </p>
+      <p>Committed to creating efficient, secure, and user-focused web solutions while continuously enhancing technical expertise.
 
-
-      <p>
-        When not decoding the customer journey, you can find me sketching on {' '}
-        <a href="https://pin.it/4W1Rxtj">Pinterest</a> {' '} or writing technical blogs for {' '}
-        <a href="https://www.lambdatest.com">LambdaTest</a> {' '} and other freelance clients.
       </p>
+    
     </>
   );
   const five = (
     <a
       className="email-link"
-      href="https://chandrikadeb7.gumroad.com"
+      href="pravven11@gmail.com"
       target="_blank"
       rel="noreferrer">
-      Check out my products!
+      Hire Me
     </a>
   );
 
